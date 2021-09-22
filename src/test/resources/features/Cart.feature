@@ -10,7 +10,7 @@ Feature: Cart functionality
 
     Examples:
       | keyword   |
-      | superstar |
+      | Ozweego |
       | Old Skool |
 
   Scenario: Add item to cart without size charts
