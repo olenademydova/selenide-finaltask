@@ -16,5 +16,4 @@ public class CartPage {
     public SelenideElement getEmptyBagMessage() {
         return emptyBagMessage;
     }
-
 }

@@ -26,12 +26,12 @@ public class ProductPageSteps {
     }
 
     @When("user clicks add to cart button")
-    public void clickAddToCart(){
+    public void clickAddToCart() {
         productPage.getAddToCartButton().click();
     }
 
     @Then("user sees message that user should choose the size")
-    public void verifyUserSeesErroMessage(){
+    public void verifyUserSeesErroMessage() {
         productPage.getSizeErrorMessage();
     }
 
@@ -49,7 +49,7 @@ public class ProductPageSteps {
     }
 
     @When("user saves item from products page")
-    public void addItemToSavedItems(){
+    public void addItemToSavedItems() {
         productPage.getSaveItemFromProductPage().click();
     }
 

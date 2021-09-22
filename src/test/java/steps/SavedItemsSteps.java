@@ -25,7 +25,7 @@ public class SavedItemsSteps {
     }
 
     @Then("user sees empty saved list")
-    public void verifyEmptySavedList(){
+    public void verifyEmptySavedList() {
         savedItemsPage.getNoItemsMessage().should(Condition.text("You have no Saved Items"));
     }
 }

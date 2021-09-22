@@ -7,11 +7,16 @@ import pages.HomePage;
 import pages.LoginPage;
 
 public class LoginSteps {
-    private HomePage homePage = new HomePage();
-    private LoginPage loginPage = new LoginPage();
+    private HomePage homePage;
+    private LoginPage loginPage;
+
+    public LoginSteps() {
+        homePage = new HomePage();
+        loginPage = new LoginPage();
+    }
 
     @When("user login with credentials - {string} / {string}")
-    public void loginWithValidCredentials(String login, String pass){
+    public void loginWithValidCredentials(String login, String pass) {
         homePage.getMyAccountDropdownButton().click();
         homePage.getSignInButton().click();
         loginPage.getEmailAddressField().sendKeys(login);
@@ -20,25 +25,25 @@ public class LoginSteps {
     }
 
     @Then("user sees greetings message")
-    public void greetingsMessage(){
+    public void greetingsMessage() {
         homePage.getMyAccountDropdownButton().hover();
         homePage.getMyAccountDropdownButton().shouldHave(Condition.text("Hi Asos"));
     }
 
     @When("user logouts")
-    public void logoutFromMainPage(){
+    public void logoutFromMainPage() {
         homePage.getMyAccountDropdownButton().hover();
         homePage.getSignOutButton().click();
     }
 
     @Then("user sees that user is logged out")
-    public void verifyThatUserLoggedout(){
+    public void verifyThatUserLoggedout() {
         homePage.getMyAccountDropdownButton().hover();
         homePage.getSignInButton().shouldBe(Condition.visible);
     }
 
     @Then("user sees error message about unsuccessful login")
-    public void verifyThatUserSeesErrorMessage(){
+    public void verifyThatUserSeesErrorMessage() {
         loginPage.getErrorMessage().shouldHave(Condition.text("Looks like either your email address or password were incorrect. Wanna try again?"));
     }
 }

@@ -8,7 +8,7 @@ import pages.CartPage;
 public class CartSteps {
     private CartPage cartPage;
 
-    public CartSteps(){
+    public CartSteps() {
         cartPage = new CartPage();
     }
 

@@ -22,5 +22,7 @@ public class LoginPage {
         return signInRegistryButton;
     }
 
-    public SelenideElement getErrorMessage() { return errorMessage; }
+    public SelenideElement getErrorMessage() {
+        return errorMessage;
+    }
 }

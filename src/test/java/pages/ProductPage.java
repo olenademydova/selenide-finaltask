@@ -3,9 +3,7 @@ package pages;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$x;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
 
 public class ProductPage {
     private SelenideElement sizeSelectDropdown = $x("//select[@data-id='sizeSelect']");
@@ -20,17 +18,27 @@ public class ProductPage {
         return sizeSelectDropdown;
     }
 
-    public ElementsCollection getAvailableSizeOptions() { return availableSizeOptions; }
+    public ElementsCollection getAvailableSizeOptions() {
+        return availableSizeOptions;
+    }
 
     public SelenideElement getAddToCartButton() {
         return addToCartButton;
     }
 
-    public SelenideElement getCartPopup() { return cartPopup; }
+    public SelenideElement getCartPopup() {
+        return cartPopup;
+    }
 
-    public SelenideElement getViewBagButton() { return viewBagButton; }
+    public SelenideElement getViewBagButton() {
+        return viewBagButton;
+    }
 
-    public SelenideElement getSizeErrorMessage() { return sizeErrorMessage; }
+    public SelenideElement getSizeErrorMessage() {
+        return sizeErrorMessage;
+    }
 
-    public SelenideElement getSaveItemFromProductPage() { return saveItemFromProductPage; }
+    public SelenideElement getSaveItemFromProductPage() {
+        return saveItemFromProductPage;
+    }
 }
